@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 22nd Birthday Anjana! 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: dreamyGradient 20s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes dreamyGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-item {
+            position: absolute;
+            animation: floatAnimation 12s infinite linear;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Landing Page Styles */
+        .landing-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 60px 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: titleShimmer 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 154, 158, 0.5);
+        }
+
+        @keyframes titleShimmer {
+            0%, 100% { 
+                background-position: 0% 50%; 
+                transform: scale(1);
+            }
+            50% { 
+                background-position: 100% 50%; 
+                transform: scale(1.02);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .date-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Special Heart Button */
+        .special-heart-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: heartFloat 3s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .special-heart-btn:hover {
+            transform: scale(1.2);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 35px rgba(255, 154, 158, 0.4);
+            animation: heartPulse 0.6s ease-in-out infinite;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1.2); }
+            50% { transform: scale(1.4); }
+        }
+
+        /* Countdown Timer Styles */
+        .countdown-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .countdown-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            text-align: center;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        .countdown-timer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .time-unit {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 15px;
+            padding: 20px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-unit:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .time-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1;
+            margin-bottom: 8px;
+            animation: numberPulse 2s ease-in-out infinite;
+            /* Fallback for better readability */
+            -webkit-text-stroke: 1px rgba(45, 55, 72, 0.3);
+        }
+
+        @keyframes numberPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .time-label {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(45, 55, 72, 0.8);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .countdown-message {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-style: italic;
+            animation: messageGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes messageGlow {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .birthday-arrived {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffeaa7, #fab1a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.5rem;
+            font-weight: 600;
+            animation: celebrationText 2s ease-in-out infinite;
+        }
+
+        @keyframes celebrationText {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .cake-section {
+            margin: 40px 0;
+        }
+
+        .cake-container {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: inline-block;
+            padding: 20px;
+        }
+
+        .cake-container:hover {
+            transform: scale(1.1);
+        }
+
+        /* Boyfriend's Romantic Page Styles */
+        .boyfriend-page {
+            display: none;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+        }
+
+        .stars-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .romantic-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .love-message-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 60px;
+        }
+
+        .distance-visual {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .location {
+            text-align: center;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .location-pin {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .location-text {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+
+        .location-text small {
+            font-size: 0.8rem;
+            color: #667eea;
+            font-style: italic;
+        }
+
+        .love-connection {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .love-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            border-radius: 2px;
+            position: relative;
+            animation: pulseConnection 2s ease-in-out infinite;
+        }
+
+        .love-line::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #fad0c4;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @keyframes pulseConnection {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        .beating-heart {
+            position: absolute;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            padding: 5px;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        .romantic-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .romantic-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: titleShimmer 4s ease-in-out infinite;
+        }
+
+        .romantic-subtitle {
+            font-size: 1.3rem;
+            color: #667eea;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .boyfriend-message {
+            margin-bottom: 40px;
+        }
+
+        .romantic-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #2d3748;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .romantic-footer {
+            border-top: 2px solid rgba(102, 126, 234, 0.1);
+            padding-top: 30px;
+        }
+
+        .love-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .romantic-back {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .romantic-back:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .cake {
+            font-size: 8rem;
+            animation: cakePulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+
+        @keyframes cakePulse {
+            0%, 100% { 
+                transform: translateY(0px) scale(1); 
+                filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+            }
+            50% { 
+                transform: translateY(-15px) scale(1.05); 
+                filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+            }
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+            font-weight: 400;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+        }
+
+        .celebration {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            animation: celebrationSlideIn 1s ease-out;
+        }
+
+        @keyframes celebrationSlideIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(50px) scale(0.8); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+
+        .celebration h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffeaa7, #fab1a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0;
+            animation: rainbowShift 4s linear infinite;
+        }
+
+        @keyframes rainbowShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .modern-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .modern-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+
+        /* Cards Page Styles */
+        .cards-page {
+            display: none;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .cards-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        .cards-header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .cards-header p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 30px 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff9a9e, #fecfef, #ffeaa7, #fab1a0, #ff9a9e);
+            background-size: 200% 100%;
+            animation: gradientMove 3s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:nth-child(even) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(254, 207, 239, 0.1));
+        }
+
+        .card:nth-child(odd) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 154, 158, 0.1));
+        }
+
+        .card-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .card-content {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .friend-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 40px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: modalSlideIn 0.5s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .modal-friend-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .modal-subtitle {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .modal-message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2d3748;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #667eea;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: scale(1.1);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            z-index: 999;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .cake {
+                font-size: 6rem;
+            }
+            
+            .glass-card {
+                padding: 40px 30px;
+                margin: 10px;
+            }
+
+            /* Countdown responsive */
+            .countdown-section {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            .countdown-title {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .countdown-timer {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .time-unit {
+                padding: 15px 8px;
+            }
+
+            .time-number {
+                font-size: 2rem;
+            }
+
+            .time-label {
+                font-size: 0.8rem;
+            }
+
+            .countdown-message {
+                font-size: 1rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .cards-header h1 {
+                font-size: 3rem;
+            }
+            
+            .cards-header p {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                height: 160px;
+                padding: 25px 20px;
+            }
+            
+            .modal-content {
+                padding: 30px 25px;
+                margin: 10px;
+            }
+            
+            .modal-friend-name {
+                font-size: 2rem;
+            }
+            
+            .back-btn {
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+            }
+
+            /* Boyfriend page responsive */
+            .love-message-card {
+                padding: 30px 25px;
+                margin-top: 40px;
+            }
+
+            .distance-visual {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .love-connection {
+                order: 2;
+                margin: 15px 0;
+            }
+
+            .love-line {
+                width: 80px;
+            }
+
+            .romantic-title {
+                font-size: 2.8rem;
+            }
+
+            .romantic-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .romantic-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+
+            .love-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .special-heart-btn {
+                top: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Confetti Styles */
+        .confetti-piece {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ff9a9e;
+            animation: confettiDrop 4s linear infinite;
+            border-radius: 2px;
+        }
+
+        @keyframes confettiDrop {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-hearts {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .loading-heart {
+            font-size: 1.5rem;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        .loading-heart:nth-child(2) { animation-delay: 0.3s; }
+        .loading-heart:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes heartBeat {
+            0%, 100% { 
+                transform: scale(1); 
+                opacity: 0.7;
+            }
+            50% { 
+                transform: scale(1.3); 
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="landing-page" id="landingPage">
+        <div class="floating-elements" id="floatingContainer"></div>
+        
+        <div class="glass-card">
+            <!-- Special Heart Button -->
+            <div class="special-heart-btn" onclick="showBoyfriendMessage()" title="A special message for Anjana from her love ❤️">
+                💖
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section" id="countdownSection">
+                <h3 class="countdown-title">My dearest Anju, Happy 22nd Birthday! ✨</h3>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="countdown-message">Your special celebration begins in... 🎂</p>
+            </div>
+
+            <h1 class="title">Happy 22nd Birthday</h1>
+            <h2 class="subtitle">Anjuuu 🌸</h2>
+            <p class="date-text">September 21st, 2025</p>
+            
+            <div class="cake-section">
+                <div class="cake-container" id="cakeContainer">
+                    <div class="cake">🎂</div>
+                    <p class="instruction">Click the cake to make a wish! ✨</p>
+                </div>
+            </div>
+            
+            <div class="celebration" id="celebration">
+                <h2>🎉 Make a Wish! 🎉</h2>
+                <div class="loading-hearts">
+                    <span class="loading-heart">💖</span>
+                    <span class="loading-heart">💖</span>
+                    <span class="loading-heart">💖</span>
+                </div>
+                <p class="subtitle">Your friends and loved ones have special messages waiting for you...</p>
+                <button class="modern-btn" onclick="showCards()">
+                    Read Your Birthday Messages 💌
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards Page -->
+    <div class="cards-page" id="cardsPage">
+        <button class="back-btn" onclick="showLanding()">← Back to Celebration</button>
+        
+        <div class="cards-header">
+            <h1>Messages From Your Friends</h1>
+            <p>We have sent you our heartfelt birthday wishes 💕</p>
+        </div>
+        
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be generated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Boyfriend's Special Message Page -->
+    <div class="boyfriend-page" id="boyfriendPage">
+        <button class="back-btn romantic-back" onclick="showLanding()">← Back</button>
+        
+        <div class="romantic-container">
+            <div class="stars-background" id="starsBackground"></div>
+            
+            <div class="love-message-card">
+                <div class="distance-visual">
+                    <div class="location india">
+                        <span class="location-pin">📍</span>
+                        <span class="location-text">Chennai<br><small>Where my heart is (with you ofc)</small></span>
+                    </div>
+                    <div class="love-connection">
+                        <div class="love-line"></div>
+                        <div class="beating-heart">💕</div>
+                    </div>
+                    <div class="location usa">
+                        <span class="location-pin">📍</span>
+                        <span class="location-text">Pittsburgh<br><small>Where you are (always in my thoughts)</small></span>
+                    </div>
+                </div>
+
+                <div class="romantic-header">
+                    <h1 class="romantic-title">From Your Love</h1>
+                </div>
+
+                <div class="boyfriend-message">
+                    <p class="romantic-text">
+                        Happyyy birthdayyy Anjuuu ❤️ I miss you soooooooo much every single day.  
+                        Namma eppo next meet pannuvom nu therila but I’m waiting for that day with all my heart.  
+                        I'm only surviving here with the thought that every passing second is bringing that moment closer. 
+                        Thank you for existing in my life. 
+                        <br><br>
+                        I’ve started to love our new virtual connection through video calls.  
+                        Daily kalaila when I wake up, Nee call panni unnoda day pathi enta sollum bodhu it feels like therapy.  
+                        I love hearing you yap, it makes me feel so close to you.  
+                        These video calls enna unkooda close ah feel pannna vaikkudhu.  
+                        Recently ah nee adhigama kudikura madhiri feel aagudhu, konjam control panniko it’s not good for your health.
+                        <br><br>
+                        I’m so proud of you for cooking your own food, college poradhu, padikradhu, and taking care of yourself all on your own.  
+                        Nee anga poitu ivlo strong and capable ah iruppa nu suthama naan nenaikala  
+                        but you’re proving it every day. I love you soooooo much, and always remember nee enga ponalum naan unkooda irupenn.
+                        <br><br>
+                        It aches to not be with you on your special day.  
+                        Idhaan first time un birthday appo naan unkooda illadhadhu,  
+                        but don’t worry, I promise I’ll make it up to you very soon.  
+                        Make good friends anga, study well, and veetla every day pesu.
+                        <br><br>
+                        I miss you terribly,  
+                        I miss helping you with your daily life, and most of all, I miss your eyes.  
+                        Inga na enga ponalum, I see places we’ve been together,  
+                        and andha memories ellam are hitting me so hard. I wish adhe madhiri namma neraya suthanum nu. 
+                        I’m so grateful to God for bringing you into my life.
+                        <br><br>
+                        I’m truly happy that I’ve found someone so precious and worthy to do this long distance with.  
+                        You’re in my thoughts every single day.  
+                        Enjoy your day, and always stay happy, because you truly deserve it anju 💖
+                        <br><br>
+                        Forever yours,<br>
+                        <span class="signature">Rishu 💕</span>
+                    </p>
+                </div>
+
+                <div class="romantic-footer">
+                    <div class="love-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="daysCount">1297</span>
+                            <span class="stat-label">Days We've been together</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">13,000Km+</span>
+                            <span class="stat-label">Distance between us</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Amount I love you</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for displaying messages -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <h2 class="modal-friend-name" id="modalFriendName"></h2>
+                <p class="modal-subtitle">Birthday Message for Anju</p>
+            </div>
+            <div class="modal-message" id="modalMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        // Friend names (actual friends from the document)
+        const friendNames = [
+            "Abaa", "Adi", "Anton", "Arvind", "Abhi",
+            "Barath", "Dharshini", "Jaishree", "Krithigaa", "Krithii",
+            "Krithik", "Muthu", "Maran", "Nakshaa", "Navin",
+            "Niruu", "Raaghav", "Raveesh", "Shriram", "Suhasini",
+            "Vaibhav", "Sanjana", "Vaeniya",
+            "Praggy", "Harshitha"
+        ];
+
+        // Actual birthday messages from friends
+        // Note: For friends without messages (Abhi, Krithigaa, Muthu, Maran, Raaghav, Vaibhav)
+        // and placeholder friends (Friend 22-26), please add their actual messages
+        const longMessages = [
+            "Hey Anjana, wishing you a very happy birthday! 🥳 I know its tough to living among the whites 😂, but ya u r a talented kid u can handle it. College life was really awesome with all our outings, debates, and endless fun. I still can't forget your laugh in Kilpauk park, bike la nadu road la kathunathu, that unforgettable cycle stunt 🤭And of course, Kritiga birthday la Navin kanathula vitathu (peak spontaneity). Those memories always remind me how much joy you brought into our gang. I've always seen you and Rishi together, so seeing him solo these days feels so different seekarama avan kalayanam pani kuda vachuko. Have an amazing year ahead, and keep spreading that same energy wherever you go! always grateful for your love and care. Miss you moreeee 🫂🫂 Luv you loads 💕🥰",
+            
+            "Hey Anjana!! many more happy returns of the day. I have always seen you as a charming friend who doesn't give up on your closest people, and I am glad to be one amongst them. i am very sure you will succeed with flying colours in this new chapter of your life. the past 4 years were so memorable and fun, now you get to spend the next 4 with the better me :) lets meet soon",
+            
+            "Hi Anjana, wishingg u a very happy birthdayyy 🫂. I still remember the first time we met in college, we met in a library, u were that innocent, energetic girl , who was full of life. Its wonderful how we have all grown up for the past 4 years, yet retain same innocence,energy and yess you aree sooo full of light,u have allways been.U r that one over achieving women whom we dont know how she manages to handle every aspects of life, i have been allways admired u for that. U have always been a very great friend of mine, a good soul, who helps, empathise,but knows what to do right, and whom to stand for. Right now,You have started journey that will take u to greater hights in your life, I just wanted you to know we are always here for u when times get tough, u allways have friends here whom u can call a home.Have the bestest of day Anjana❤",
+            
+            "Happy Birthday 5ana, one of the bestest sweetest cutest person I’ve met🥰.  Unnaya madhiri naalu per irundha indha oor nala irukum bcoz you always want a happy present and happy future with everyone😇. Enaku neraya help panirka like therinjo theriyamalo, thaniyave college life full ah irundhurlam nu yosipen apo nee vandhu pesuna I would want to join the group and enjoy andha vishyathula you have been in my side always. Neraiya outings neraya chats neraya talks and nee phone olunga phone vechukadha nala dha naa oruthangaloda A list la vandhurken 😂. A lots lore we have, nee us poirka vendam thonum but ultimately as a friend i should wish you a successful and happy life and that is what I’m praying for, despite all the struggles in the states you have to pass out in flying colours and make us proud i know you will 😎. Happy Birthday again 🥳 periya aal ah va India vandhu ella treat uhm settle pani vitru, you are lucky to have an awesome bf you two look superb together and you two should make it till the end. -wishes from airwind 💐🌼🎂",
+            
+            "Hey anjana, Happy birthdayyyy!! Your first birthday in this new country is probably intimidating but don't forget all of us here are cheering you on and missing you!!! I wish you find more girlfriends to have late night talks and gossip with like we did in hostel. Nothing can replace us ik lol but I hope you find the next best thing. I always think that it was just yesterday that we got together to work on our capstone project and you used to tell us about your plans to go abroad. So proud to see you are fulfilling your dreams and making us and your family proud. Keep going cause we are always there standing behind you. 🫂🫂 Once again happy birthday hope you get crazy drunk but be safe!",
+            
+            "Hi Anjana! Happy 22nd Birthday and your first birthday out of our home country. You are a brave, strong woman and I really admire the risks you have taken especially in this political situation. Everything will align and be alright Anjana.. dw.. My most favourite quality of you is - BALANCE in terms of studies and having fun.. u lived clg to the fullest at the same excelled.. which requires the greatest emotional maturity, discipline and thought process. Wish we spent more time together but still inimelu nama ino Nala pesalaa.. I learned more ABT you when rishi speaks ABT u.. thn u actually telling me hehe...ur bf rishi is my guy and we speak as much as you speak (I think hehehe)... My fav memory of you is In our blore trip to mysore apo nama biriyani sambavam aprm nee car la pasikithu solre reactions tha 🤣.. and how cud I forgot that time when rishi was riding scooty triples apo u were doing bhajans 🤣🤣🤣... Also goa bangers 🤣.. So wish u the best of your career in which especially you are satisfied and happy with how things are in your life.. and any advice or question in life.. I'm jst a call or text away Anjana... P.S. Rishi vida thangamana payen valkaila kadaikathu unaku.. If u do my guy dirty I Will kill you hehe 🔪😂",
+            
+            "Happy birthday anjuu🥰 Grp la elarumm ona epovum irukanum nu ik how much efforts you put in nu..and yar unta vanthu evlo rude ah pesinalum reply avanga hurt ava koodathu nu porumaya pesuva..that is something i want to learn from you..you deserve soo much happiness and love in your life..I miss all the hostel days 🥹kutta room la ukanthu samandham eh ilatha vishyatha pathi pesurathuu elame… seekram india vaa fun panlamm",
+            
+            "Anjanaaaa🥰 You were the connecting puzzle of the group. Nan laam neraya time group eh venam nu odhungi irukapo kooda yaarum kandukalena nee vandhu kepa Enachu enanu. Sathyama I can never be like you. You are that one person who makes or atleast tries to make everyone comfortable and happy. Sanda podrapo kooda opposite la irukkavunga hurt aagama pesuva. You're one of those very kind good souls. Most of the exams ku un room kadhava thatti dhan pass eh aairuken nan. I obviously miss our hostel days, random restroom talks, Nadu night arattais and everything. Hope you're having the best life you always wanted there. All of us are there for you no matter what. Even if you feel lonely sometimes I'm just a call or text away. Enna dhan namma thaniya romba pesalenaalum you'll always be one of those good close frnds for me. Love you Anjana Happiee Birthdayy 🥰🫂❤",
+            
+            "Happiesttt birthdayyy anjuuuu🥰 My closessttttt friendddd.  I miss our outings and in person gossips 😂❤. Epo meet pana porom Therla 😂 trump vera enathayooo soli ooombitaaan. Paapom . Till then as usual video calls 🤓 loveeee u anjuuuuuu😘 Olungaa padi and fun alsooo panuuuu😶‍🌫",
+            
+            "Happyy birthday anju!!You'll always be the one that I'll come to when I need some sensible advice🫶.Somehow you make total sense everytime you speak and thats one of my fav things about you! I'll always have all our late night hostel talks close to my heart.Big fan of your ideologies and spiritual understanding.May you keep remaining this cute,wise,quirky and sassy person that you are 🫂",
+            
+            "Happy birthday anjanaaa!! Hope you are having a great life there, on the other side of us. Thanks for all the lil memories. N2k days were📈. Grateful 🥰. Sorry, never had the chance to congratulate and wish for your masters. Rock it ❤ Once again hbd ❤",
+            
+            "Dear Anjanaaaa, Damn, it’s so sudden…it really feels like there’s a lot of distance now. But honestly, you’re one of my closest friends and I truly rasicheyen all our competitive spirits and the way we pushed through every assignment together. It’s insane how much fun that was! You’re such a caring person 🥰and I really miss our “library meetings.” Across all the semesters we thought 😂 we went there to learn but let’s be real, it was mostly just fun! xD enaku innum 1.2-hour call back in 2nd year, stressing and laughing about placements and everything. From sitting just one bench away in college to now being miles apart, the bond still feels the same like an elastic searchhhhh :) that always returns records , no matter the distance. happiesttt birthdayyy! Miss you so much and wish you nothing but the best in life. and last but not least you’ve got a true gem in your life, Rishi. What a man! :))) Once again HBD anajananananana 🥰",
+            
+            "Maran's Birthday message coming soon... 🎉",
+            
+            "Happy Birthday Anjuu ❤ You're honestly one of the sweetest and cutest people I've ever met. I love how you always put in the effort to stay in touch and start convos with us – it really means a lot 🥹 I miss our hostel days so much – from sticking posters on your walls to our late-night gossips and little life talks, those were the besttt. I know you're so far away now, but I just want you to know that I'm always just a text away if you ever need me. Love you sooo muchhh big hugs 💕",
+            
+            "Hi anjanaaa, iniya piranthanal valthukal ❤🥳 Hope you are having a great time in US. Nejamave nee enaku oru super duper friend, namba clg time la fun panathula marakave mudiyathu those chit chats, gossips, games, clock tower fun, and main aa antha debates between you and muhilan😂 athella vera level fun... ipdi solte polam. I know that you are really missing our gang, koodiya viraivil nee india vanthathum we all can hangout together as we used to do before. Stay strong 💪,Nalla padi. Once again Happy Happy birthday 🎈🥳",
+            
+            "Hiii anjuuuu happiessttt birthdayyyy to youuu!🥰🫂😘 Never frgt your potential and never think you are lesss in any wayyy. You are one of the most caring and loving people I know, always holding everyone together and never letting our frnd grp feel broken. Honestly I wouldn't have survived uni without you and your patience 🥹. You're that one person who never gives up on anyone, no matter what, and that's the most beautiful thing about you. You've taught me so much just by being you, calm, kind, and always choosing love over anger. I love how you always see the good in people even when it's tough. I'm sooo proud of you for chasing your dreams abroad and balancing everything so well. You and Rishiii are literally goals even in long distance ❤. I just love you loads anjuuu, misss youuu so much🫂. Always rooting for you, always here for you 💕",
+            
+            "Happy birthday Anjana! US la new chapter start panniruka, sudden ah ellarayum vitu anga irukradha overwhelming ah irukalam missings ah irukum, we all miss u too but unaku pudicha course pannitu iruka, u r one of the most ambitious ppl i know, im sure you’ll do great. US layum poitu oru kalaku kalakiduva 😂 Enjoy ur birthday, have a blast. Kudiya seekram nalla seidhi edhirpaathutu irukom from u and rishi 😂",
+            
+            "Hellooo Anjana, many many happiest birthday!!🥳🥳🥳 Hope youre doing good!! US la jolly ah fun pannu and nalla padichu successful ah vaa! Wishing you all the success and happiness in life❤ Hope you've settled down and enjoying in the US, and I know you're missing the gang, your family, and Rishi a lot but don't worry Rishi koodiya seekrom vandruvaan 😂. Periya aal aanadhuku aprom ena lam marandradhaa, let's catch up once in a while, and keep in touch😄 Anyways, wishing you the happiest birthday!!🥳❤",
+            
+            "Many many more happy returns of the day Anjanaaa🥰 eppayume idhe maari ellarukkum pudicha friend aave iru. Don't chage your character for others. Engala vittutu neraya sarakadikaadha 😏 I miss you so much seekiram India vaa namma kanavu kannis trip polam 🤣🥰 neraya impromptu outing sleepovers lam nee illadhadhu naala fulfill aava maatingidhu. Anyways succeed big in your life. We all are rooting for you 🫂 winter season la snowman lam panni photo anuppu 😂 happiest birthdays🫂 Love you -twineyyyy 👯‍♂",
+            
+            "Anjuuuu❤🥺I miss you so much. Happy happy happy 22 , chill down and relax a bit🥰❤🎀 take things one day at a time. Come back and meet us soon ❤❤❤",
+            
+            "Happy Birthday Anjjj. It’s funny how we randomly clicked and I’m glad we did, You’re the kind of person who brings that energy wherever you go. It’s one of the many things I really like about you, and it makes being around you a lot easier for me as I can just sit back and relax and don’t have to necessarily try hard to interact, knowing you’ll do the heavylifting. Also, thanks for always supporting me no matter what random stuff I tried to do, for sending all those notes a day before exam, for always being curious about my scripts, even nagging me at times and pushing me to finish them, for taking the time to give me honest reviews and listening to me rant. As you step into another year, I hope it’s full of experiences and loads of fun. I hope you have a great time at CMU and in Pittsburgh. Here’s to more conversations that swing between serious and silly, more fun, and more memories in the years ahead❤🥂 With love Vibzzz",
+            
+            "Happiest returns of the dayyy to you Anjana!!! We have just been together for roughly 2 months and feels like i have always known you!! You have been more than a roommate. I can randomly barge into your room whenever I feel like I have lost human connection and we sit and yap shit for hours!! You have been there with me through the broke and the broken phase during the first few weeks of coming here and I am really glad for having a supportive housemate like you!! Stay the same charming and cheerful person! Love you so much and love partying with you!! Happy 22! Know that you can always come to me and I will always be your person!!",
+
+            "Happy Birthday Anjana 🥰 you are such a cutie pie.. right from the vr mall incident that we got caught to my dad😂 getting caught by RV ma'am 😂.. to many more funny moments.. we have already started missing you.. the paal vellai girl in our gang went to USA... and so proud of you for cooking your food daily😭🤟🏻All the best for your career there🤌🏻May God bless you with all you want.. I've always admire you for your spirituality and antha respect for your parents.. adhelam apde maintain paniko.. ena d na ivlo formal aa pesine iruken😂sweet aa msg anupanu nu romba conscious aa pesure😂😂even though we don't text each other daily you'll always be very close to me 😘 vettis group oda founder anjana love you ma 🥰 ok d avlo dha po bye 😂😘",
+            
+            "Heyyyy Anju, it’s been a min. From skl and Aakash days, to clg later, you’ve been there as one of my best mates and I miss you and all the days we all hung out a lot. You’re one of the most talented ppl I’ve seen who does it all. May this year bring you brighter days, many moments to cherish, more reasons to smile, and all the success you’ve been waiting for. Wishing you all that you’ve been craving for and you deserve the best. Rock the states despite situation getting shittier by the day lol. Happy birthday dumbo ❤ come back to India soon. much love <33",
+
+            "Harshitha Birthday message coming soon... 🎉 (Please add Friend 26's message here)"
+        ];
+
+        // Create floating elements
+        function createFloatingElement() {
+            const elements = ['🌸', '🦋', '✨', '💕', '🌙', '💫', '🌺'];
+            const element = document.createElement('div');
+            element.className = 'floating-item';
+            element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+            element.style.left = Math.random() * 100 + '%';
+            element.style.animationDelay = Math.random() * 12 + 's';
+            element.style.fontSize = (Math.random() * 1 + 1) + 'rem';
+            document.getElementById('floatingContainer').appendChild(element);
+            
+            setTimeout(() => {
+                element.remove();
+            }, 12000);
+        }
+
+        // Create confetti
+        function createConfetti() {
+            const colors = ['#ff9a9e', '#fecfef', '#ffeaa7', '#fab1a0', '#74b9ff', '#fd79a8'];
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 4 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 4000);
+                }, i * 100);
+            }
+        }
+
+        // Create stars for romantic page
+        function createStars() {
+            const starsContainer = document.getElementById('starsBackground');
+            if (!starsContainer) return;
+            
+            // Clear existing stars
+            starsContainer.innerHTML = '';
+            
+            // Create 50 stars
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Cake cutting interaction
+        document.getElementById('cakeContainer').addEventListener('click', function() {
+            this.style.transform = 'scale(0) rotate(180deg)';
+            this.style.opacity = '0';
+            
+            setTimeout(() => {
+                this.style.display = 'none';
+                document.getElementById('celebration').style.display = 'flex';
+                createConfetti();
+            }, 500);
+        });
+
+        // Generate cards with friend names
+        function generateCards() {
+            const container = document.getElementById('cardsContainer');
+            container.innerHTML = '';
+            
+            friendNames.forEach((name, index) => {
+                setTimeout(() => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(50px)';
+                    
+                    card.innerHTML = `
+                        <div class="card-number">${index + 1}</div>
+                        <div class="card-content">
+                            <div class="friend-name">${name}</div>
+                        </div>
+                    `;
+                    
+                    // Add click event to open modal with safety check
+                    card.addEventListener('click', function() {
+                        const message = longMessages[index] || "A special birthday message waiting for you...";
+                        openModal(name, message);
+                    });
+                    
+                    container.appendChild(card);
+                    
+                    // Animate card in
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                    
+                }, index * 100);
+            });
+        }
+
+        // Modal functions
+        function openModal(friendName, message) {
+            document.getElementById('modalFriendName').textContent = friendName;
+            document.getElementById('modalMessage').textContent = message;
+            document.getElementById('modalOverlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking overlay
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Navigation functions
+        function showCards() {
+            document.getElementById('landingPage').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('landingPage').style.display = 'none';
+                document.getElementById('cardsPage').style.display = 'block';
+                document.getElementById('cardsPage').style.opacity = '0';
+                
+                setTimeout(() => {
+                    document.getElementById('cardsPage').style.transition = 'opacity 0.5s ease';
+                    document.getElementById('cardsPage').style.opacity = '1';
+                    generateCards();
+                }, 50);
+            }, 500);
+        }
+
+        function showLanding() {
+            // Hide all pages
+            document.getElementById('cardsPage').style.display = 'none';
+            document.getElementById('boyfriendPage').style.display = 'none';
+            
+            // Show landing page
+            document.getElementById('landingPage').style.display = 'flex';
+            document.getElementById('landingPage').style.opacity = '0';
+            
+            setTimeout(() => {
+                document.getElementById('landingPage').style.transition = 'opacity 0.5s ease';
+                document.getElementById('landingPage').style.opacity = '1';
+            }, 50);
+        }
+
+        function showBoyfriendMessage() {
+            document.getElementById('landingPage').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('landingPage').style.display = 'none';
+                document.getElementById('boyfriendPage').style.display = 'block';
+                document.getElementById('boyfriendPage').style.opacity = '0';
+                
+                // Create stars animation
+                createStars();
+                
+                setTimeout(() => {
+                    document.getElementById('boyfriendPage').style.transition = 'opacity 0.5s ease';
+                    document.getElementById('boyfriendPage').style.opacity = '1';
+                }, 50);
+            }, 500);
+        }
+
+        // Initialize floating elements
+        setInterval(createFloatingElement, 1500);
+
+        // Countdown Timer Functionality
+        function updateCountdown() {
+            // Set target date: September 21, 2025 at 12:00 AM Eastern Time
+            const targetDate = new Date('2025-09-21T00:00:00-04:00'); // EDT (Eastern Daylight Time)
+            const now = new Date();
+            const timeDifference = targetDate.getTime() - now.getTime();
+
+            if (timeDifference > 0) {
+                // Calculate time units
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                // Update display with zero padding
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // Birthday has arrived!
+                document.getElementById('countdownSection').innerHTML = `
+                    <div class="birthday-arrived">
+                        🎉 IT'S YOUR SPECIAL DAY ANJANA! 🎉
+                        <br>
+                        <span style="font-size: 1.2rem; margin-top: 10px; display: block;">
+                            The most beautiful day of the year is finally here! ✨
+                        </span>
+                    </div>
+                `;
+                createConfetti();
+            }
+        }
+
+        // Start countdown timer
+        updateCountdown(); // Initial call
+        setInterval(updateCountdown, 1000); // Update every second
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start countdown timer immediately
+            updateCountdown();
+            
+            // Create initial floating elements
+            for (let i = 0; i < 8; i++) {
+                setTimeout(createFloatingElement, i * 1000);
+            }
+        });
+    </script>
+</body>
+</html>
